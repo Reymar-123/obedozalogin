@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Log In</title>
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+
+	<center>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class="trans">
+		<form>
+			<center> <img src="images/ucu.png" > </center>
+		<br>
+		<br>
+		<h1> URDANETA CITY UNIVERSITY </h1>
+			<input type="text" id="name" placeholder="Username"> <br>
+			<input type="password" id="pass" placeholder="Password"> <br>
+			<input type="submit" onclick="login()" value="LOG IN" class="log">
+		</form>
+		</div>
+	</center>
+
+
+
+<script type="text/javascript">
+		
+		function login()
+		{
+			var dname = "ucu";
+			var dpass = "admin";
+
+			name = document.getElementById('name').value;
+			pass = document.getElementById('pass').value;
+
+			if (dname == name && dpass == pass)
+			{
+				alert("Access Granted");
+			}
+			else if (dname != name && dpass == pass)
+			{
+				alert("Invalid Username");
+			}
+			else if (dname == name && dpass != pass)
+			{
+				alert("Invalid Password");
+			}
+			else
+			{
+				alert("Access Denied!");
+			}
+		}
+		
+
+</script>
+</body>
+</html>
